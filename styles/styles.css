@@ -8,12 +8,25 @@
     background-color: var(--background);
     margin: 0;
     padding: 0;
+    font-size: 62.5%;
+}
+
+@keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
 }
 
 h1 {
     color: var(--golden);
     text-align: center;
-    font-size: 45px;
+    font-size: 5.5rem;
     padding: 30px 0;
     margin: auto;
 }
@@ -27,12 +40,19 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-auto-rows: 150px;
     grid-auto-flow: dense;
+    animation: fade-up 0.6s 0.8s backwards;
+      
 }
 
 .container a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container a:hover {
+    transform: scale(1.08);
+    transition: all 0.4s;
 }
 
 .container a img {
